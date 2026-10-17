@@ -1,9 +1,9 @@
 # GameVault: PWA-приложение
 
-Игровой хаб в стиле яркого мультяшного лобби. Референс: [MooWin Casino Lobby (Neomodeon, Dribbble)](https://dribbble.com/shots/25336477-MooWin-Casino-Crash-game-Lobby-page).
+Референс: [MooWin Casino Lobby (Neomodeon, Dribbble)](https://dribbble.com/shots/25336477-MooWin-Casino-Crash-game-Lobby-page).
 
 ## Экраны
-1. **Лобби**: баннер «Игра недели», задания, популярное, жанры, новинки
+1. **Главная**: баннер «Игра недели», задания, популярное, жанры, новинки
 2. **Игры (каталог)**: поиск и жанры
 3. **Страница игры**: рейтинг, описание, «Играть», «в избранное», «поделиться», похожие игры
 4. **Избранное**: сохранённые игры (хранятся в localStorage)
