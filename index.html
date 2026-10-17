@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GameVault</title>
+  <meta name="description" content="Arcade game hub: games, favorites, mini-arcade and player profile.">
+  <meta name="theme-color" content="#0d0a24">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Боковое меню (планшет и компьютер) -->
+    <aside class="sidebar">
+      <a class="logo" href="#/home">
+        <img src="icons/icon-192.png" alt="" width="40" height="40">
+        <span>Game<b>Vault</b></span>
+      </a>
+      <div class="promo-tiles">
+        <a class="promo promo-arcade" href="#/arcade"><span class="promo-ico">⭐</span><span data-i18n="nav.arcade"></span></a>
+        <button class="promo promo-bonus" data-action="claim"><span class="promo-ico">🎁</span><span data-i18n="side.bonus"></span></button>
+      </div>
+      <nav class="side-nav" id="sideNav"></nav>
+      <div class="side-bottom">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button data-lang="en">EN</button><button data-lang="ru">RU</button>
+        </div>
+        <button class="side-install" data-action="install">⬇ <span data-i18n="profile.install"></span></button>
+      </div>
+    </aside>
+
+    <div class="main-col">
+      <header class="topbar">
+        <button class="icon-btn back" id="backBtn" aria-label="Back" hidden>
+          <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <a class="logo logo-mobile" href="#/home">
+          <img src="icons/icon-192.png" alt="" width="32" height="32">
+          <span>Game<b>Vault</b></span>
+        </a>
+        <form class="top-search" id="topSearch" role="search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input type="search" name="q" autocomplete="off" data-i18n-placeholder="catalog.search">
+        </form>
+        <span class="offline-pill" id="offlinePill" hidden data-i18n="offline"></span>
+        <div class="coins" title="Coins"><span class="coin">●</span><b id="coinCount">0</b></div>
+        <a class="top-avatar" href="#/profile" id="topAvatar" aria-label="Profile"></a>
+      </header>
+
+      <main id="view" class="view" tabindex="-1"></main>
+    </div>
+
+    <!-- Правая панель (широкий экран) -->
+    <aside class="rightbar" id="rightbar"></aside>
+  </div>
+
+  <!-- Нижнее меню (телефон) -->
+  <nav class="tabbar" id="tabbar" aria-label="Navigation"></nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
